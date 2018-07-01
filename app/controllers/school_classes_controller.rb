@@ -1,6 +1,6 @@
 class SchoolClassesController < ApplicationController
   def create
-    @student_class = StudentClass.new
+    @student_class = SchoolClass.new(post_params(:title, :room_number))
   end
 
   private
